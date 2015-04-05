@@ -18,7 +18,7 @@
 				if($this->uri->segment(3)!= null){
 					if($this->uri->segment(4) != 999)
 					{
-						echo '<a href=""><img src="http://localhost/myalbum/album/'.$this->uri->segment(4).'.jpg" width="700px" height="500px" alt=""></a>';
+						echo '<a href=""><img src="http://localhost/myalbum/album/'.$pics[$this->uri->segment(4)-1]->name.'.jpg" width="700px" height="500px" alt=""></a>';
 					}
 					else {
 						echo "Yolo, Live one, Live Forever";	
@@ -36,19 +36,19 @@
 					<div class="form-group">
 						<?php 
 						if($this->uri->segment(3)!= null){
-							$i=1;
-							foreach ($pics as $p) {
-								if($p->aID == $this->uri->segment(3)){
-									echo '<a href="http://localhost/myalbum/index.php/pics/show/'.$p->aID.'/'.$p->name.'">
-									<img src="http://localhost/myalbum/album/'.$p->name.'.jpg" alt="" width="100px">
-								</a>';
+								$i=0;
+								foreach ($pics as $p) {
+									if($p->aID == $this->uri->segment(3)){
+										echo '<a href="http://localhost/myalbum/index.php/pics/show/'.$p->aID.'/'.$p->id.'">
+										<img src="http://localhost/myalbum/album/'.$p->name.'.jpg" alt="" width="100px">
+									</a>';
+								}
 							}
 						}
-					}
-					else{
-						echo '<center><img src="http://localhost/myalbum/album/smile.jpg" alt=""><center>';
-					}
-					?>
+						else{
+							echo '<center><img src="http://localhost/myalbum/album/smile.jpg" alt=""><center>';
+						}
+						?>
 				</div>
 			</form>
 		</div>
