@@ -11,6 +11,7 @@
 </head>
 <body>
 	<a href="http://localhost/myalbum/index.php/pics/show"><h1 class="text-center">Big IMG</h1></a>
+	<a href="http://localhost/myalbum/index.php/auth/logout"> Logout </a>
 	<div class="container">
 		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 			<div id="main">
