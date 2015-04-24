@@ -2,7 +2,7 @@
 <p><?php echo lang('login_subheading');?></p>
 
 <div id="infoMessage"><?php echo $message;?></div>
-
+Default account: admin@admin.com - password
 <?php echo form_open("auth/login");?>
 
   <p>
